@@ -104,7 +104,7 @@
       "projectType": "library",
       "root": "projects/ng-neun",
       "sourceRoot": "projects/ng-neun/src",
-      "prefix": "lib",
+      "prefix": "ne",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
