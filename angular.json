@@ -20,18 +20,11 @@
             "outputPath": "dist/neun-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -82,19 +75,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
@@ -102,21 +87,26 @@
     },
     "ng-neun": {
       "projectType": "library",
-      "root": "projects/ng-neun",
-      "sourceRoot": "projects/ng-neun/src",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "ng-neun",
+      "sourceRoot": "ng-neun",
       "prefix": "ne",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ng-neun/ng-package.json"
+            "project": "ng-neun/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-neun/tsconfig.lib.prod.json"
+              "tsConfig": "ng-neun/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ng-neun/tsconfig.lib.json"
+              "tsConfig": "ng-neun/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -124,11 +114,8 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ng-neun/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "tsConfig": "ng-neun/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }

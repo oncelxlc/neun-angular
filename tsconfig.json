@@ -12,9 +12,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ng-neun": [
-        "dist/ng-neun"
-      ]
+      "ng-neun": ["dist/ng-neun/index.ts"],
+      "ng-neun/*": ["dist/ng-neun/*"]
     },
     "declaration": false,
     "downlevelIteration": true,
@@ -24,13 +23,8 @@
     "target": "ES2020",
     "module": "ES2020",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2020",
-      "dom"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "lib": ["ES2020", "dom"],
+    "typeRoots": ["node_modules/@types"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
