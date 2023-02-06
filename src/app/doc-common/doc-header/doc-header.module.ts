@@ -10,6 +10,6 @@ import { DocHeaderComponent } from './doc-header.component';
   ],
   imports: [
     CommonModule
-  ]
+  ], exports: [DocHeaderComponent]
 })
 export class DocHeaderModule { }
